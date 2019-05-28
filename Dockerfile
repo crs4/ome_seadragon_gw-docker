@@ -31,4 +31,6 @@ COPY resources/80-apply-migrations.sh \
      resources/99-run.sh \
      /startup/
 
+EXPOSE 8080
+
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
