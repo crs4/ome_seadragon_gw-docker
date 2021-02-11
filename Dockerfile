@@ -1,4 +1,4 @@
-FROM python:2-stretch
+FROM python:3-stretch
 LABEL maintainer="luca.lianas@crs4.it"
 
 RUN mkdir -p /home/ome-seadragon
