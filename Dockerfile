@@ -11,7 +11,7 @@ RUN mkdir $APP_HOME \
     && chown -R ome-seadragon ${APP_HOME}
 WORKDIR $APP_HOME
 
-ARG OME_SEADRAGON_GW_VERSION=0.1.3
+ARG OME_SEADRAGON_GW_VERSION=0.2.0
 
 USER ome-seadragon
 
