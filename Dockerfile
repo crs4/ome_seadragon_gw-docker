@@ -24,7 +24,8 @@ USER root
 
 WORKDIR ${APP_HOME}/ome_seadragon_gateway/
 
-RUN pip install -r requirements_pg.txt \
+RUN pip install --upgrade pip \
+    && pip install -r requirements_pg.txt \
     && pip install gunicorn==19.9.0
 
 COPY resources/entrypoint.sh \
