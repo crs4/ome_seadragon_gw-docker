@@ -11,7 +11,7 @@ RUN mkdir $APP_HOME \
     && chown -R ome-seadragon ${APP_HOME}
 WORKDIR $APP_HOME
 
-ARG OME_SEADRAGON_GW_VERSION=0.2.2
+ARG OME_SEADRAGON_GW_VERSION=0.3.0
 
 USER ome-seadragon
 
@@ -24,7 +24,8 @@ USER root
 
 WORKDIR ${APP_HOME}/ome_seadragon_gateway/
 
-RUN pip install -r requirements_pg.txt \
+RUN pip install --upgrade pip \
+    && pip install -r requirements_pg.txt \
     && pip install gunicorn==19.9.0
 
 COPY resources/entrypoint.sh \
